@@ -40,7 +40,7 @@ int main()
 		}
 		else if (option == 2) {
 			// call a function play game
-			//cout << "Playing..." << endl;
+			//TODO: add your game function inside startGame()
 			startGame();
 		}
 		else if (option == 3) {
@@ -96,7 +96,10 @@ void showInvalidOptionScreen() {
 }
 
 
-
+/**
+ * @brief Shows the instruction screen.
+ * @return nothing
+ */
 void showInstructions() {
 	
 	Game game("Space Invaders", 2025);
@@ -112,7 +115,7 @@ void showInstructions() {
 void startGame() {
 	int currentScore = 70;
 	// plug in here your game code function and make it return the score the player got
-
+	//TODO:
 
 	//This is to add the user to the hall of fame.
 	Scoreboard scoreboard;

@@ -191,7 +191,13 @@ void Canvas::printScreen(const string& title, const string& content)
     
 }
 
-
+/**
+ * @brief Print the Scoreboard using the generic function print screen.
+ *
+ * @param title Screen title
+ * @param content Content to display, a whole string with new lines to separate rows.
+ * @return nothing
+ */
 void Canvas::printScoreboard(const string& title, const string& content)
 {
     printScreen(title, content);  // Reuse the printScreen function
@@ -205,7 +211,7 @@ void Canvas::printMainMenu()
     printJustified(" 3: Scoreboard", this->width, Left);
     printJustified(" 4: Exit", this->width, Left);
     printBricksRowOf(this->width, true);
-	//Do not wait for user input here, we will manage it in the main game loop
+	//Do not wait for user input here(press enter to continue..), we will manage it in the main game loop
 }
 
 void Canvas::printScreenInvalidOption() {
@@ -220,7 +226,14 @@ void Canvas::printScreenInvalidOption() {
     pressEnterToContinue();
 }
 
-
+/**
+ * @brief Print a screen .
+ *
+ * @param title Title for the screen
+ * @param subtitle Subtitle for the screen
+ * @param content Vector of strings representing the content lines
+ * @return nothing
+ */
 void Canvas::printScreenWithContent(string title, string subtitle, vector<string> content) {
     clearScreen();
     printHeader(title, this->width);
@@ -262,8 +275,6 @@ string Canvas::printScoreboardInputPlayer() {
     printBricksRowOf(this->width, true);
 
     cout << "\nNickname saved! Press Enter to continue...";
-    //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     return nickname;
-    //pressEnterToContinue();
 
 }
