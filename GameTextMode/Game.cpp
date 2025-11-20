@@ -5,12 +5,12 @@ Game::Game() {
     this->yearCreated = 2025;
 }
 
-Game::Game(const string& t, int year)  {
+Game::Game( string t, int year)  {
     this->title = t;
     this->yearCreated = year;
 }
 
-void Game::setTitle(const string& t) {
+void Game::setTitle( string t) {
     title = t;
 }
 
@@ -18,23 +18,23 @@ void Game::setYearCreated(int year) {
     yearCreated = year;
 }
 
-string Game::getTitle() const {
+string Game::getTitle()  {
     return title;
 }
 
-int Game::getYearCreated() const {
+int Game::getYearCreated()  {
     return yearCreated;
 }
 
-vector<string> Game::getInstructions() const {
+vector<string> Game::getInstructions()  {
     return instructions;
 }
 
-void Game::addInstruction(const string& instruction) {
+void Game::addInstruction( string instruction) {
     instructions.push_back(instruction);
 }
 
-void Game::printInstructions() const {
+void Game::printInstructions()  {
     cout << "Instructions for " << title << ":" << endl;
     for (int i = 0; i < instructions.size(); i++) {
         cout << i + 1 << ". " << instructions[i] << endl;

@@ -16,18 +16,18 @@ public:
     Game();
 
     // Parameterized constructor
-    Game(const string& title, int year);
+    Game( string title, int year);
 
     // Setters
-    void setTitle(const string& title);
+    void setTitle( string title);
     void setYearCreated(int year);
 
     // Getters
-    string getTitle() const;
-    int getYearCreated() const;
-    vector<string> getInstructions() const;
+    string getTitle() ;
+    int getYearCreated() ;
+    vector<string> getInstructions() ;
 
     // Methods to modify instructions
-    void addInstruction(const string& instruction);
-    void printInstructions() const;
+    void addInstruction( string instruction);
+    void printInstructions() ;
 };

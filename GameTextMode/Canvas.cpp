@@ -167,7 +167,7 @@ void Canvas::doNothing() {
 	cout << "Do Nothing";
 }
 
-void Canvas::printScreen(const string& title, const string& content)
+void Canvas::printScreen( string title,  string content)
 {
     clearScreen();  // optional, remove if you don't want auto-clear
     printHeader(title, this->width);
@@ -198,7 +198,7 @@ void Canvas::printScreen(const string& title, const string& content)
  * @param content Content to display, a whole string with new lines to separate rows.
  * @return nothing
  */
-void Canvas::printScoreboard(const string& title, const string& content)
+void Canvas::printScoreboard( string title,  string content)
 {
     printScreen(title, content);  // Reuse the printScreen function
 }

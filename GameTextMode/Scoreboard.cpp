@@ -1,6 +1,6 @@
 #include "Scoreboard.h"
 
-bool Scoreboard::readPlayersFromFile(const string& filename, vector<Player>& players) {
+bool Scoreboard::readPlayersFromFile( string filename, vector<Player>& players) {
     ifstream file(filename);
     if (!file.is_open()) {
         cerr << "Error: Could not open file " << filename << endl;
@@ -36,7 +36,7 @@ bool Scoreboard::readPlayersFromFile(const string& filename, vector<Player>& pla
     return true;
 }
 
-string Scoreboard::buildScoreboardString(const vector<Player>& players) {
+string Scoreboard::buildScoreboardString( vector<Player>& players) {
     stringstream ss;
     //setw(n) reserves 'n' positions of lenght, inside will send text
     ss << left << setw(15) << "Nickname" 
@@ -51,7 +51,7 @@ string Scoreboard::buildScoreboardString(const vector<Player>& players) {
     return ss.str();
 }
 
-void Scoreboard::storeEntry(const string nickname, const string name, int points) {
+void Scoreboard::storeEntry( string nickname,  string name, int points) {
     ofstream file("leaderboard.txt", ios::app); // Open in append mode
     if (!file.is_open()) {
         cerr << "Error: Could not open file leaderboard.txt for writing." << endl;

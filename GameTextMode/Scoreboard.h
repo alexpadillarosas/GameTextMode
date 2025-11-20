@@ -14,9 +14,9 @@ class Scoreboard {
 public:
 	int minScoreToEnter = 60; // Minimum score required to enter the scoreboard
 
-    bool readPlayersFromFile(const string& filename, vector<Player>& players);
-    string buildScoreboardString(const vector<Player>& players);
- 	void storeEntry(const string nickname, const string name, int points);
+    bool readPlayersFromFile( string filename, vector<Player>& players);
+    string buildScoreboardString(vector<Player>& players);
+ 	void storeEntry( string nickname,  string name, int points);
 	void sortPlayersByScore(vector<Player>& players);
 
 

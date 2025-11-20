@@ -31,8 +31,8 @@ public:
     void clearScreen();
     void printASCIIfromFile(string fileName);
 	void printASCIIArt(string filename);
-	void printScreen(const string& title, const string& content);
-	void printScoreboard(const string& title, const string& content);
+	void printScreen( string title,  string content);
+	void printScoreboard( string title,  string content);
 	void printMainMenu();
 	void printScreenInvalidOption();
 	void printScreenWithContent(string title, string subtitle, vector<string> content);
